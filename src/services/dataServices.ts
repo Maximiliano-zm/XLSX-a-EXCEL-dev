@@ -58,13 +58,9 @@ const c4 = excelToJson({
     }
 });
     const ExceltoJSON = ()=>{
-        const allDataInJSON = {c1,c2,c3,c4}
-        console.log(allDataInJSON)
-        return allDataInJSON
+        console.log(c1,c2,c3,c4)
     }
 
 const DATA = ExceltoJSON()
 
 export default DATA
-
-
