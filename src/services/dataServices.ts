@@ -1,23 +1,69 @@
-const XLSX = require("xlsx")
+const excelToJson = require('convert-excel-to-json'); //npm encargado de crear la conversion entre excel a json
+const sourceFile = {sourceFile: 'C:\\Users\\KILD\\Desktop\\XLSX-a-JSON-dev\\src\\xlsx\\Prueba.xlsx'} //busca el archivo del excel
+//props
+const sheet1 = {sheets: ['Hoja1']}
+const sheet2 = {sheets: ['Hoja2']}
+const sheet3 = {sheets: ['Hoja3']}
 
-interface Datos {
-    ID : string,
-    firstName : string,
-    fecha : string
-}
+const c1 = excelToJson({
+    ...sourceFile,
+    ...sheet1,
+    range : 'A2:C2',
+    header:{
+        rows: 1
+    },
+    columnToKey:{
+        'A': '{{A1}}',
+        'B': '{{B1}}',
+        'C': '{{C1}}'
+    }
+});
+const c2 = excelToJson({
+    ...sourceFile,
+    ...sheet1,
+    range : 'A8:C8',
+    header:{
+        rows: 7
+    },
+    columnToKey:{
+        'A': '{{A1}}',
+        'B': '{{B1}}',
+        'C': '{{C1}}'
+    }
+});
+const c3 = excelToJson({
+    ...sourceFile,
+    ...sheet2,
+    range : 'A2:B2',
+    header:{
+        rows: 1
+    },
+    columnToKey:{
+        'A': '{{A1}}',
+        'B': '{{B1}}',
+        'C': '{{C1}}'
+    }
+});
+const c4 = excelToJson({
+    ...sourceFile,
+    ...sheet3,
+    range : 'A2:B2',
+    header:{
+        rows: 1
+    },
+    columnToKey:{
+        'A': '{{A1}}',
+        'B': '{{B1}}',
 
-const ExcelAJSON = ()=>{
+    }
+});
+    const ExceltoJSON = ()=>{
+        const allDataInJSON = {c1,c2,c3,c4}
+        console.log(allDataInJSON)
+        return allDataInJSON
+    }
 
-const excel = XLSX.readFile("C:\\Users\\KILD\\Desktop\\G\\XLSX-a-JSON\\Prueba.xlsx")
-    let NombreHoja = excel.SheetNames;
-    // let datos : Datos = XLSX.utils.sheet_to_json(excel.Sheets[NombreHoja[0]]);
-        let datos : Datos = XLSX.utils.sheet_to_json(excel.Sheets[NombreHoja[1]]);
-
-        // console.log(datos)
-        return datos
-}
-
-const DATA = ExcelAJSON()
+const DATA = ExceltoJSON()
 
 export default DATA
 
