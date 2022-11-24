@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Api rest / Convert Excel to Json.
 ---
 ## How install
 - npm i
@@ -15,7 +15,7 @@ Open http://localhost:3000/api/data to view it in your browser.
 - npm install convert-excel-to-json
 
 ---
-## scripts in package.json
+## Scripts in package.json
     "dev": "ts-node-dev src/index.ts",
     "start": "node build/index.js",
     "tsc": "tsc", : transform file ts in js
