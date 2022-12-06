@@ -1,10 +1,8 @@
-const excelToJson = require('convert-excel-to-json'); //npm encargado de crear la conversion entre excel a json
-const sourceFile = {sourceFile: 'C:\\Users\\KILD\\Desktop\\XLSX-a-JSON-dev\\src\\xlsx\\Prueba.xlsx'} //busca el archivo del excel
-//props
+const excelToJson = require('convert-excel-to-json');
+const sourceFile = {sourceFile: 'C:\\Users\\MAXIMILIANO.ZURITA\\OneDrive - GAMA LEASING OPERATIVO SPA\\Escritorio\\G\\XLSX-a-EXCEL-dev\\src\\xlsx\\Prueba.xlsx'}
 const sheet1 = {sheets: ['Hoja1']}
 const sheet2 = {sheets: ['Hoja2']}
 const sheet3 = {sheets: ['Hoja3']}
-
 const c1 = excelToJson({
     ...sourceFile,
     ...sheet1,
@@ -53,14 +51,14 @@ const c4 = excelToJson({
     },
     columnToKey:{
         'A': '{{A1}}',
-        'B': '{{B1}}',
-
+        'B': '{{B1}}'
     }
 });
     const ExceltoJSON = ()=>{
-        console.log(c1,c2,c3,c4)
+        // console.log(c1,c2,c3,c4)
+            const allDataInJSON = {c1,c2,c3}
+            console.log(allDataInJSON)
+            return allDataInJSON
     }
-
 const DATA = ExceltoJSON()
-
 export default DATA

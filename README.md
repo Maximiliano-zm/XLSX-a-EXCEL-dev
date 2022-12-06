@@ -25,3 +25,7 @@ Open http://localhost:3000/api/data to view it in your browser.
 ## Change Tsconfig.json
 
 - "outDir": "./build",   
+
+## abrir conexion aws
+
+- ssh ubuntu@ec2-52-67-234-208.sa-east-1.compute.amazonaws.com -i node.pem
