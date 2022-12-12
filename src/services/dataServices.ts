@@ -1,6 +1,5 @@
 const excelToJson = require('convert-excel-to-json');
-const sourceFile = {sourceFile: 'ubuntu@ip-172-31-4-27:~/projects/XLSX-a-EXCEL-dev/src/xlsx/Prueba.xlsx'}
-
+const sourceFile = {sourceFile: 'ubuntu@ip-172-31-4-27:~//projects//XLSX-a-EXCEL-dev//src//xlsx//Prueba.xlsx'}
 const sheet1 = {sheets: ['Hoja1']}
 const sheet2 = {sheets: ['Hoja2']}
 const sheet3 = {sheets: ['Hoja3']}
