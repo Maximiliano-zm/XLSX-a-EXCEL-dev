@@ -15,5 +15,5 @@ app.use('/api/data' , dataRouter)
 
 
 app.listen(PORT,()=>{
-    console.log(`server running on port ${PORT}` + `/api/data`);
+    console.log(`http://ec2-18-228-196-89.sa-east-1.compute.amazonaws.com:${PORT}/api/data`);
 })
