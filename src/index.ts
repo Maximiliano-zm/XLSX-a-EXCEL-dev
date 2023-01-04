@@ -15,5 +15,5 @@ app.use('/api/data' , dataRouter)
 
 
 app.listen(PORT,()=>{
-    console.log(`server running on port ${PORT}`)
+    console.log(`server running on port ${PORT}` + `/api/data`);
 })
